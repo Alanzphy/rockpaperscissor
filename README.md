@@ -9,7 +9,7 @@ npm install
 npx expo start
 ```
 
-Escaneá el QR con la app **Expo Go** en tu celular.
+Escaneá el QR con la app **Expo Go** en tu celular, o corré `npx expo start --web` para abrirla en el navegador.
 
 ## Estructura (MVC)
 
@@ -24,6 +24,7 @@ Escaneá el QR con la app **Expo Go** en tu celular.
 
 ```bash
 npm test
+npm test -- --coverage   # incluye el % de cobertura
 ```
 
 ## Casos de prueba de sistema (evidencia real)

@@ -25,3 +25,16 @@ Escaneá el QR con la app **Expo Go** en tu celular.
 ```bash
 npm test
 ```
+
+## Casos de prueba de sistema (evidencia real)
+
+`scripts/capture-system-tests.js` corre la app real (build web de Expo) con Playwright headless y genera en `assets/pruebas-sistema/` las capturas de los casos de prueba de sistema documentados en la tarea de pruebas de software:
+
+```bash
+npx expo export --platform web
+npx serve dist -l 5555 &
+sleep 2
+node scripts/capture-system-tests.js
+```
+
+El `sleep 2` es necesario para darle tiempo al servidor estático a levantar el puerto 5555 antes de que el script intente conectarse.

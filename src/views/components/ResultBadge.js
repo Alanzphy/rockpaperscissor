@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function ResultBadge({ text }) {
   return (
     <View style={styles.badge}>
-      <Text style={styles.text}>{text}</Text>
+      <Text testID="result-text" style={styles.text}>{text}</Text>
     </View>
   );
 }

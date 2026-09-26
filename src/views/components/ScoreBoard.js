@@ -6,11 +6,11 @@ export default function ScoreBoard({ playerScore, computerScore }) {
     <View style={styles.row}>
       <View style={styles.column}>
         <Text style={styles.label}>Jugador</Text>
-        <Text style={styles.score}>{playerScore}</Text>
+        <Text testID="score-player" style={styles.score}>{playerScore}</Text>
       </View>
       <View style={styles.column}>
         <Text style={styles.label}>Computadora</Text>
-        <Text style={styles.score}>{computerScore}</Text>
+        <Text testID="score-computer" style={styles.score}>{computerScore}</Text>
       </View>
     </View>
   );

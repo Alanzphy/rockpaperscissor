@@ -6,6 +6,9 @@
 # dependencies
 node_modules/
 
+# test coverage reports
+coverage/
+
 # Expo
 .expo/
 dist/

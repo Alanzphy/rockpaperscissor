@@ -4,7 +4,11 @@ import HandIcon from './HandIcon';
 
 export default function ChoiceButton({ type, selected, onPress, style }) {
   return (
-    <Pressable onPress={() => onPress(type)} style={[styles.cell, style]}>
+    <Pressable
+      testID={`choice-${type}`}
+      onPress={() => onPress(type)}
+      style={[styles.cell, style]}
+    >
       {selected ? (
         <View style={styles.selectedBox}>
           <HandIcon type={type} />

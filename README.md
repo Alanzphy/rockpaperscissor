@@ -13,6 +13,15 @@ Escaneá el QR con la app **Expo Go** en tu celular.
 
 ## Estructura (MVC)
 
-- **Model** — `src/models/GameModel.js`: lógica del juego (jugada random de la PC, quién gana, marcador).
+- **Model**:
+  - `src/models/vo/Choice.js`: value object de una elección (PIEDRA/PAPEL/TIJERAS) y a cuál le gana.
+  - `src/models/vo/RoundResult.js`: value object del resultado de una ronda (quién ganó).
+  - `src/models/managers/GameManager.js`: orquesta una jugada (elección random de la PC, marcador).
 - **View** — `src/views/`: componentes visuales (header, marcador, botones, resultado).
-- **Controller** — `App.js`: conecta Model y View.
+- **Controller** — `App.js` + `src/hooks/useGame.js`: el hook conecta Model y View; `App.js` solo lo consume.
+
+## Tests
+
+```bash
+npm test
+```

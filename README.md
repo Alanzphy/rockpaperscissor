@@ -27,9 +27,16 @@ npm test
 npm test -- --coverage   # incluye el % de cobertura
 ```
 
-## Casos de prueba de sistema (evidencia real)
+Suite con Jest (`jest-expo` + `@testing-library/react-native`), un archivo `*.test.js` por cada pieza del modelo y del hook:
 
-`scripts/capture-system-tests.js` corre la app real (build web de Expo) con Playwright headless y genera en `assets/pruebas-sistema/` las capturas de los casos de prueba de sistema documentados en la tarea de pruebas de software:
+- `src/models/vo/Choice.test.js` — valida `Choice` (valores inválidos, `random()`, `beats()`/`equals()`).
+- `src/models/vo/RoundResult.test.js` — resuelve empate, victoria del jugador y victoria de la computadora.
+- `src/models/managers/GameManager.test.js` — suma de puntos, empate sin puntos, acumulación del marcador.
+- `src/hooks/useGame.test.js` — estado inicial del hook y actualización tras `handleSelect`.
+
+## Casos de prueba de sistema
+
+`scripts/capture-system-tests.js` corre la app real (build web de Expo) con Playwright headless y genera en `assets/pruebas-sistema/` las capturas de los casos de prueba de sistema
 
 ```bash
 npx expo export --platform web

@@ -42,6 +42,9 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# tarea individual, no se sube al repo
+/Pruebas de software.md
+
 # generated native folders
 /ios
 /android

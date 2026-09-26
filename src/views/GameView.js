@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { CHOICES } from '../models/GameModel';
+import { CHOICES } from '../models/vo/Choice';
 import Header from './components/Header';
 import ScoreBoard from './components/ScoreBoard';
 import ChoiceButton from './components/ChoiceButton';

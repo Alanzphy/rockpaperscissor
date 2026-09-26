@@ -1,6 +1,6 @@
 import React from 'react';
 import Svg, { Rect } from 'react-native-svg';
-import { CHOICES } from '../../models/GameModel';
+import { CHOICES } from '../../models/vo/Choice';
 
 const STROKE = '#1a237e';
 const STROKE_WIDTH = 3;
